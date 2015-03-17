@@ -8,7 +8,7 @@ the script 'run_analysis.R' enables the merging and then cleaning of Samsung dat
 
 the script assumes that the Samsung data is in your working directory for R.
 
-the library reshape2 and plyr are used to process the data and prepare it for being cleaned and output to the final text document output.
+the library reshape2 is used to process the data and prepare it for being cleaned and output to the final text document output.
 
 The steps involved in the analysis are:
 
@@ -38,5 +38,5 @@ The average (mean) variable is then put into one column and each observation (ac
 Steps to run the analaysis
 
 1. In R set your working directory to where the Samsung data set is saved locally
-2. Install the packages 'reshape2' and 'plyr' if not already installed
+2. Install the package 'reshape2' if not already installed
 3. Run the run_analysis.R file
