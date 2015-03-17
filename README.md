@@ -28,7 +28,7 @@ The steps involved in the analysis are:
   ii) make.names() used to make variable names syntatically valid in R
 
 5. the final step is to create a second independent tidy data set with the average of each variable for each subject and activity. Here we use the melt function in plyr to make the data long and tall with 4 columns: subject, activity, variable and mean figure.
-  i) aggregate() used to group variables by activity and subject and mean calculated for each variable for these groups.
+  i) aggregate() used to group variables by activity and subject and mean calculated for each variable for these   groups.
   ii) melt() used to transform the data from a wide data set with variables in different columns to a tidy data set where according to Hadley Wickham's paper on tidy data sets:
 1. Each variable forms a column.
 2. Each observation forms a row.
@@ -37,6 +37,6 @@ The average (mean) variable is then put into one column and each observation (ac
 
 Steps to run the analaysis
 
-1. In R set your working directory to where the Samsung data set is saved locally
-2. Install the package 'reshape2' if not already installed
-3. Run the run_analysis.R file
+    1. In R set your working directory to where the Samsung data set is saved locally
+    2. Install the package 'reshape2' if not already installed
+    3. Run the run_analysis.R file
