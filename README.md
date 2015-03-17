@@ -35,8 +35,12 @@ The steps involved in the analysis are:
 3. Each type of observational unit forms a table 
 The average (mean) variable is then put into one column and each observation (activity, subject, variable) forms a row. This final independent tidy data set meets Hadley Wickham's criteria for a tidy data set. 
 
-Steps to run the analaysis
+# Steps to run the analysis
 
     1. In R set your working directory to where the Samsung data set is saved locally
     2. Install the package 'reshape2' if not already installed
     3. Run the run_analysis.R file
+
+# About the codebook
+
+The codebook provides explanation of the variables and descriptions of these that make up the tidy data set
