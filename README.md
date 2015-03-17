@@ -13,10 +13,23 @@ the library reshape2 and plyr are used to process the data and prepare it for be
 The steps involved in the analysis are:
 
 1. Merging the training and test data sets to create one new data set and adding column variable names
+  a) cbind() and rbind() used to bring test and train data sets together and to add labels    
 2. Extracting from this new data set only the columns of interest that contain either mean() or std()
+  a) grep() used to find only variable names that have mean() or std()
+  b) use result of which to subset the data to extract the variables of interest
 3. Modifying the activity variable to show the descriptive names for each activity; standing, walking etc.
+  a) as.factor() used to change activity variable to a factor variable then;
+  b) levels() used to change factor levels of activity variable from numbers to descriptive activity labels 
 4. Labelling the variables with descriptive variable names. Here we've made sure that variable names are syntatically valid names using make.names()
-5. the final step is to create a second independent tidy data set with the average of each variable for each subject and activity. Here we use the melt function in plyr to make the data long and tall with 4 columns: subject, activity, variable and mean figure. 
+  a) gsub() used to remove parentheses
+  b) make.names() used to make variable names syntatically valid in R
+5. the final step is to create a second independent tidy data set with the average of each variable for each subject and activity. Here we use the melt function in plyr to make the data long and tall with 4 columns: subject, activity, variable and mean figure.
+  a) aggregate() used to group variables by activity and subject and mean calculated for each variable for these groups.
+  b) melt() used to transform the data from a wide data set with variables in different columns to a tidy data set where according to Hadley Wickham's paper on tidy data sets:
+    1. Each variable forms a column.
+    2. Each observation forms a row.
+    3. Each type of observational unit forms a table 
+The average (mean) variable is then put into one column and each observation (activity, subject, variable) forms a row. This final independent tidy data set meets Hadley Wickham's criteria for a tidy data set. 
 
 Steps to run the analaysis
 
